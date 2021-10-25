@@ -1,0 +1,51 @@
+
+
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<style>
+    .red {color: red;}
+    .green {color: green;}
+    .blue {color: cornflowerblue}
+    .dimgray {color:dimgray}
+</style>
+<div class="p-3 mb-2 bg-secondary text-white">
+<div class="table table-dark table-striped">
+<div class="row justify-content-center">
+
+
+    <div class="col-auto">
+
+    <h1 > 10 Pillars: {{name}}</h1>
+      <table class="table table-responsive,table table-dark table-striped">
+
+
+
+          <tr>
+              {%for (k,v), (k2,v2) in zip(content.items(), colors.items()):%}
+           <th> {{k}}</th>
+              <td class="{{'red' if v2 == False else 'green'}}">{{v}}</td>
+
+
+           <th> {{value}}</th>
+
+            <tr></tr>
+          {% endfor %}
+        <tr>
+
+
+
+        </tr>
+    </table>
+
+
+</div>
+</div>
+</div>
+</div>
+{% endblock %}
+
